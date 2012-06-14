@@ -1,0 +1,49 @@
+# A simple karyotype with 42 species instead of chromosomes.
+#
+# The format of this file is
+#
+# chr - CHRNAME CHRLABEL START END COLOR
+#
+# In data files, chromosomes are refered to by CHRNAME. 
+# On the image, they are labeled by CHRLABEL
+#
+# Colors are taken from the spectral Brewer palette. 
+# To learn about Brewer palettes, see www.colorbrewer.org
+
+chr	-	HhMO722	HhMO722	0	2151759	dyellow
+chr	-	26222	26222	0	1802155	lred
+chr	-	22124	22124	0	1916367	dred
+chr	-	22421	22421	0	1843471	dred
+chr	-	3655	3655	0	1878368	dred
+chr	-	6P18H1	6P18H1	0	1912236	dred
+chr	-	7P49H1	7P49H1	0	1827667	dred
+chr	-	AA	AA	0	1901442	dred
+chr	-	BB	BB	0	1849928	dred
+chr	-	CC	CC	0	1913616	dred
+chr	-	CZ412602	CZ412602	0	1767215	dred
+chr	-	DD	DD	0	1778129	dred
+chr	-	EE	EE	0	1813033	dred
+chr	-	GG	GG	0	1887192	dred
+chr	-	HH	HH	0	1837347	dred
+chr	-	II	II	0	1958910	dred
+chr	-	JJ	JJ	0	1959382	dred
+chr	-	NML20	NML20	0	1792119	dred
+chr	-	R1838	R1838	0	1829694	dred
+chr	-	R3021	R3021	0	1890918	dred
+chr	-	R393	R393	0	2009930	dred
+chr	-	UC16	UC16	0	1865433	dred
+chr	-	Hh23221	Hh23221	0	1915217	dgreen
+chr	-	Hh60P3H1	Hh60P3H1	0	1772931	dgreen
+chr	-	HhC2321	HhC2321	0	1836156	dgreen
+chr	-	M19107	M19107	0	1915087	dgreen
+chr	-	M19501	M19501	0	1884911	dgreen
+chr	-	M21127	M21127	0	1945624	dgreen
+chr	-	M21621	M21621	0	2089205	dgreen
+chr	-	M21639	M21639	0	2328161	dgreen
+chr	-	86028NP	86028NP	0	1914490	dred
+chr	-	B10810	B10810	0	1981535	dred
+chr	-	R2846	R2846	0	1824242	dred
+chr	-	R2866	R2866	0	1933340	dred
+chr	-	RdKW20	RdKW20	0	1830138	dred
+
+
