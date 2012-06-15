@@ -6,48 +6,74 @@ chromosomes_display_default = yes
 
 <links>
 
-z      = 0
-radius = 0.95r
+radius = 0.99r
 bezier_radius = 0.1r
 
 <link segdup>
 show         = yes
-color        = vvdgrey
+color        = vlgrey
 thickness    = 20
-file         = links_gt5000bp_one_tweener.txt
+file         = links_gt2500bp_one_tweener.txt
 ribbon		 = yes
-stroke_thickness = 20
+z      = 100
 
 #record_limit = 25000
 
 
 <rules>
 
+#Color match between M21639's smaller matching syntenic region
 <rule>
-importance = 200
-condition  = max(_SIZE1_,_SIZE2_) < 1000
-show = no
+importance = 211
+condition  = (_SIZE1_ < 5200 || _SIZE2_ < 5200) && (_CHR1_ eq "M21639" || _CHR2_ eq "M21639")
+z          = 50
+color      = blue
+thickness  = 5
+stroke_color = blue
+stroke_thickness = 25
 </rule>
 
+
+# alter color for links b/w the tweener and M19501
 <rule>
-importance = 150
-condition  = 1
-z = eval(int(max(_SIZE1_,_SIZE2_)/50))
+importance = 210
+condition  = (_CHR2_ eq "26222" && _CHR1_ eq "M19501")
+color     = dred
+stroke_color = dred
+stroke_thickness = 25
+z = 6
+</rule>
+
+# alter color for any links that are between M21621, M21127, and M19107
+<rule>
+importance = 200
+condition  = _CHR1_ eq "M19107" || _CHR2_ eq "M19107" ||  _CHR1_ eq "M21127" || _CHR2_ eq "M21127" || _CHR1_ eq "M21621"  || _CHR2_ eq "M21621" 
+color     = dpurple
+stroke_color = dpurple
+stroke_thickness = 25
+z = 20
 </rule>
 
 # alter color for any links that go to parainfluenzae
 <rule>
-importance = 90
+importance = 190
 condition  = _CHR1_ eq "HhMO722" || _CHR2_ eq "HhMO722"
 color     = dyellow
-flow       = continue
+stroke_color = dyellow
+stroke_thickness = 20
+z = 10
 </rule>
 
+
+# alter color for any links that go to haemolyticus
 <rule>
 importance = 180
-condition  = _CHR2_ eq "hs10" || _CHR2_ eq "hs11" || _CHR2_ eq "hs12"
-radius2    = 0.75r
-flow       = continue
+condition  = _CHR1_ eq "M19501"  || _CHR2_ eq "M19501" 
+# || _CHR1_ eq "HhC2321" || _CHR1_ eq "M21639" || _CHR2_ eq "HhC2321"  || _CHR2_ eq "M19501" || _CHR2_ eq "M21639" || _CHR1_ eq "Hh23221" || _CHR2_ eq "Hh23221" || _CHR1_ eq "Hh60P3H1" || _CHR2_ eq "Hh60P3H1"
+color     = dgreen
+stroke_color = dgreen
+stroke_thickness = 20
+z = 5
 </rule>
 
 

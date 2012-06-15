@@ -47,9 +47,9 @@ seq39	R2846
 seq40	R2866
 seq41	RdKW20 );
 
-open I, "links_gt5000bp_one_tweener", or die "Can't open the links file:$!\n";
+open I, "links_gt2500bp_one_tweener", or die "Can't open the links file:$!\n";
 my @l = <I>;
-open O, '>', "links_gt5000bp_one_tweener.txt", or die "Can't open the conf file for output: $!\n";
+open O, '>', "links_gt2500bp_one_tweener.txt", or die "Can't open the conf file for output: $!\n";
 
 for my $link (@l){
     for my $k (keys %names){
