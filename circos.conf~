@@ -13,7 +13,7 @@ bezier_radius = 0.1r
 show         = yes
 color        = vlgrey
 thickness    = 20
-file         = links_gt2500bp_one_tweener.txt
+file         = links_gt5000bp_one_tweener.txt
 ribbon		 = yes
 z      = 100
 
@@ -27,17 +27,18 @@ z      = 100
 importance = 211
 condition  = (_SIZE1_ < 5200 || _SIZE2_ < 5200) && (_CHR1_ eq "M21639" || _CHR2_ eq "M21639")
 z          = 50
-color      = blue
+color      = vdblue
 thickness  = 5
-stroke_color = blue
+stroke_color = vdblue
 stroke_thickness = 25
+flow = continue
 </rule>
 
 
 # alter color for links b/w the tweener and M19501
 <rule>
 importance = 210
-condition  = (_CHR2_ eq "26222" && _CHR1_ eq "M19501")
+condition  = (_CHR2_ eq "26222" && _CHR1_ eq "M19501") 
 color     = dred
 stroke_color = dred
 stroke_thickness = 25
@@ -47,7 +48,7 @@ z = 6
 # alter color for any links that are between M21621, M21127, and M19107
 <rule>
 importance = 200
-condition  = _CHR1_ eq "M19107" || _CHR2_ eq "M19107" ||  _CHR1_ eq "M21127" || _CHR2_ eq "M21127" || _CHR1_ eq "M21621"  || _CHR2_ eq "M21621" 
+condition  = (_CHR1_ eq "M19107" || _CHR2_ eq "M19107" ||  _CHR1_ eq "M21127" || _CHR2_ eq "M21127" || _CHR1_ eq "M21621"  || _CHR2_ eq "M21621") && (_CHR1_ eq "M19107" || _CHR2_ eq "M19107" ||  _CHR1_ eq "M21127" || _CHR2_ eq "M21127" || _CHR1_ eq "M21621"  || _CHR2_ eq "M21621")
 color     = dpurple
 stroke_color = dpurple
 stroke_thickness = 25
@@ -82,6 +83,50 @@ z = 5
 </link>
 </links>
 
+<plots>
+<plot>
+
+show    = yes
+type    = tile
+file    = virulence_tiles
+
+<rules>
+
+<rule>
+color = lgrey
+importance = 0
+stroke_thickness = 25
+stroke_color = lgrey
+flow = continue
+</rule>
+
+<rule>
+importance = 300
+condition = _CHR_ ne "hs1"
+color = purple
+stroke_thickness = 25
+stroke_color = dpurple
+</rule>
+</rules>
+
+layers_overflow = grow
+layers_overflow_color = red
+
+margin = 0.02u
+
+orientation = in
+
+thickness = 8
+padding = 5
+
+color = lpurple
+r0    = 1.02r
+r1    = 1.5r
+
+
+</plot>
+</plots>
+
 <<include ideogram.conf>>
 
 <<include ticks.conf>>
@@ -91,3 +136,5 @@ z = 5
 <<include ../etc/colors_fonts_patterns.conf>>
 
 <<include ../etc/housekeeping.conf>>
+
+
