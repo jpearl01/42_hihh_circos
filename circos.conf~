@@ -93,24 +93,19 @@ file    = virulence_tiles
 <rules>
 
 <rule>
-color = lgrey
+color = white
 importance = 0
-stroke_thickness = 25
-stroke_color = lgrey
 flow = continue
 </rule>
 
 <rule>
 importance = 300
-condition = _CHR_ ne "hs1"
+condition = _CHR_ eq "B10810" || _CHR_ eq "CZ412602" || _CHR_ eq "DD" || _CHR_ eq "EE"|| _CHR_ eq "HH"||_CHR_ eq "BB"||_CHR_ eq "GG"|| _CHR_ eq "AA"|| _CHR_ eq "CC"|| _CHR_ eq "II" || _CHR_ eq "JJ"||_CHR_ eq "NML20"||_CHR_ eq "R2846"||_CHR_ eq "7P49H1"|| _CHR_ eq "R1838"||_CHR_ eq "3655"||_CHR_ eq "6P18H1"||_CHR_ eq "86028NP"||_CHR_ eq "R2866"||_CHR_ eq "M21127"||_CHR_ eq "B10810"||_CHR_ eq "R393"||_CHR_ eq "M21621"||_CHR_ eq "M21639"
 color = purple
 stroke_thickness = 25
 stroke_color = dpurple
 </rule>
 </rules>
-
-layers_overflow = grow
-layers_overflow_color = red
 
 margin = 0.02u
 
@@ -119,9 +114,9 @@ orientation = in
 thickness = 8
 padding = 5
 
-color = lpurple
+color = white
 r0    = 1.02r
-r1    = 1.5r
+r1    = 1.05r
 
 
 </plot>
